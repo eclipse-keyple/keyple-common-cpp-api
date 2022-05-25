@@ -1,0 +1,18 @@
+url: https://github.com/eclipse/keyple-common-cpp-api
+organization:
+  name: Eclipse Keyple
+  url: https://keyple.org/
+licenses:
+  - name: Eclipse Public License - v 2.0
+    url: https://www.eclipse.org/legal/epl-2.0/
+    distribution: repo
+developers:
+  - name: Keyple Contributors
+    email: keyple-dev@eclipse.org
+scm:
+  connection: scm:git:git://github.com/eclipse/keyple-common-cpp-api.git
+  developerConnection: scm:git:https://github.com/eclipse/keyple-common-cpp-api.git
+  url: https://github.com/eclipse/keyple-common-cpp-api
+ciManagement:
+  system: GitHub Actions
+  url: https://github.com/eclipse/keyple-common-cpp-api/actions
