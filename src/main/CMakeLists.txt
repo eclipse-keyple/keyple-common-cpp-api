@@ -1,6 +1,5 @@
 # *************************************************************************************************
-# Copyright (c) 2021 Calypso Networks Association                                                 *
-# https://www.calypsonet-asso.org/                                                                *
+# Copyright (c) 2021 Calypso Networks Association http://calypsonet.org/                          *
 #                                                                                                 *
 # See the NOTICE file(s) distributed with this work for additional information regarding          *
 # copyright ownership.                                                                            *
@@ -11,6 +10,18 @@
 # SPDX-License-Identifier: EPL-2.0                                                                *
 # *************************************************************************************************/
 
-# Add projects
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/main/)
-#add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/test/)
+SET(LIBRARY_NAME keyplecommoncppapilib)
+
+# declare this library as header only
+ADD_LIBRARY(
+    ${LIBRARY_NAME}
+    INTERFACE
+)
+
+TARGET_INCLUDE_DIRECTORIES(
+    ${LIBRARY_NAME}
+    INTERFACE
+    ${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+ADD_LIBRARY(Keyple::CommonApi ALIAS ${LIBRARY_NAME})
