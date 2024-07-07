@@ -8,18 +8,38 @@
  * SPDX-License-Identifier: MIT                                               *
  ******************************************************************************/
 
-#include <regex>
+#pragma once
 
-#include "gmock/gmock.h"
-#include "gtest/gtest.h"
+#include <string>
 
-#include "keyple/core/common/CommonApiProperties.hpp"
+namespace keyple {
+namespace core {
+namespace common {
 
-using keyple::core::common::CommonApiProperties_VERSION;
+/**
+ * API properties
+ *
+ * @since 2.0.0
+ */
+// class CommonApiProperties final {
+// public:
+//     /**
+//      * API version: {@value}
+//      *
+//      * @since 2.0.0
+//      */
+//     static const std::string VERSION;
 
-TEST(CommonApiPropertiesTest, versionIsCorrectlyWritten) {
-    const std::string& apiVersion = CommonApiProperties_VERSION;
-    const std::regex r("\\d+\\.\\d+");
+// private:
+//     /**
+//      * Private constructor
+//      */
+//     CommonApiProperties() {}
+// };
 
-    ASSERT_TRUE(std::regex_match(apiVersion, r));
-}
+// const std::string CommonApiProperties::VERSION = "2.0";
+static const char* CommonApiProperties_VERSION = "2.0";
+
+} /* namespace common */
+} /* namespace core */
+} /* namespace keyple */

@@ -8,18 +8,28 @@
  * SPDX-License-Identifier: MIT                                               *
  ******************************************************************************/
 
-#include <regex>
+#pragma once
 
-#include "gmock/gmock.h"
-#include "gtest/gtest.h"
+namespace keyple {
+namespace core {
+namespace common {
 
-#include "keyple/core/common/CommonApiProperties.hpp"
+/**
+ * Generic type for a Keyple distributed local service extension.
+ *
+ * <p>Any Keyple distributed local extension must provide a factory that
+ * implements this interface.
+ *
+ * @since 2.0.0
+ */
+class KeypleDistributedLocalServiceExtension {
+public:
+    /**
+     * Virtual destructor.
+     */
+    virtual ~KeypleDistributedLocalServiceExtension() = default;
+};
 
-using keyple::core::common::CommonApiProperties_VERSION;
-
-TEST(CommonApiPropertiesTest, versionIsCorrectlyWritten) {
-    const std::string& apiVersion = CommonApiProperties_VERSION;
-    const std::regex r("\\d+\\.\\d+");
-
-    ASSERT_TRUE(std::regex_match(apiVersion, r));
-}
+} /* namespace common */
+} /* namespace core */
+} /* namespace keyple */

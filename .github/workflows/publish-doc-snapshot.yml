@@ -15,22 +15,28 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+
       - name: Make scripts executable
         run: chmod +x ./.github/scripts/*.sh
+
       - name: Check version
         working-directory: .
         run: ./.github/scripts/check_version.sh
+
       - name: Patch Doxyfile
         working-directory: .
         run: ./.github/scripts/patch_doxyfile.sh ${{ env.PROJECT_VERSION }}
-      - name: Generate project documentation with Doxygen
-        uses: mattnotmitt/doxygen-action@v1.9.2
+
+      - name: Generate and prepare documentation
+        uses: eclipse-keypop/keypop-actions/doxygen@f012732e75cdda39ba7b988533030493303700a5
         with:
-          working-directory: .github/doxygen/
-          doxyfile-path: ./Doxyfile
+          repo-name: ${{ github.event.repository.name }}
+          version: ${{ github.event.inputs.version || github.ref_name }}
+
       - name: Prepare Doxygen doc page locally
         working-directory: .
         run: ./.github/scripts/prepare_doxygen.sh ${{ env.PROJECT_VERSION }}
+
       - name: Deploy to doc branch
         run: |
           git config --global user.name "Eclipse Keypop Bot"

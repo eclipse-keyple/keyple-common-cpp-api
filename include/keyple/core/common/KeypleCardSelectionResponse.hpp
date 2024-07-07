@@ -8,18 +8,29 @@
  * SPDX-License-Identifier: MIT                                               *
  ******************************************************************************/
 
-#include <regex>
+#pragma once
 
-#include "gmock/gmock.h"
-#include "gtest/gtest.h"
+namespace keyple {
+namespace core {
+namespace common {
 
-#include "keyple/core/common/CommonApiProperties.hpp"
+/**
+ * Generic type for a POJO used to carry the response of a card selection
+ * request.
+ *
+ * <p>A card selection response is the result of presenting a card to an
+ * observable reader in a selection scenario.
+ *
+ * @since 2.0.0
+ */
+class KeypleCardSelectionResponse {
+public:
+    /**
+     * Virtual destructor.
+     */
+    virtual ~KeypleCardSelectionResponse() = default;
+};
 
-using keyple::core::common::CommonApiProperties_VERSION;
-
-TEST(CommonApiPropertiesTest, versionIsCorrectlyWritten) {
-    const std::string& apiVersion = CommonApiProperties_VERSION;
-    const std::regex r("\\d+\\.\\d+");
-
-    ASSERT_TRUE(std::regex_match(apiVersion, r));
-}
+} /* namespace common */
+} /* namespace core */
+} /* namespace keyple */
