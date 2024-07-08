@@ -1,14 +1,10 @@
 /**************************************************************************************************
- * Copyright (c) 2021 Calypso Networks Association                                                *
- * https://www.calypsonet-asso.org/                                                               *
+ * Copyright (c) 2024 Calypso Networks Association https://calypsonet.org/                        *
  *                                                                                                *
- * See the NOTICE file(s) distributed with this work for additional information regarding         *
- * copyright ownership.                                                                           *
+ * This program and the accompanying materials are made available under the                       *
+ * terms of the MIT License which is available at https://opensource.org/licenses/MIT.            *
  *                                                                                                *
- * This program and the accompanying materials are made available under the terms of the Eclipse  *
- * Public License 2.0 which is available at http://www.eclipse.org/legal/epl-2.0                  *
- *                                                                                                *
- * SPDX-License-Identifier: EPL-2.0                                                               *
+ * SPDX-License-Identifier: MIT                                                                   *
  **************************************************************************************************/
 
 #include <regex>
@@ -16,16 +12,15 @@
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
 
-/* Keyple Common */
-#include "CommonApiProperties.h"
+#include "keyple/core/common/CommonApiProperties.hpp"
 
 using namespace testing;
 
-using namespace keyple::core::common;
+using keyple::core::common::CommonApiProperties_VERSION;
 
 TEST(CommonApiPropertiesTest, versionIsCorrectlyWritten)
 {
-    const std::string& apiVersion = CommonApiProperties::VERSION;
+    const std::string& apiVersion = CommonApiProperties_VERSION;
     const std::regex r("\\d+\\.\\d+");
 
     ASSERT_TRUE(std::regex_match(apiVersion, r));

@@ -7,15 +7,25 @@
  * SPDX-License-Identifier: MIT                                                                   *
  **************************************************************************************************/
 
-#include "gtest/gtest.h"
+#pragma once
 
-using namespace testing;
+namespace keyple {
+namespace core {
+namespace common {
 
-int main(int argc, char **argv)
-{
-    /* Initialize GTest */
-    ::testing::InitGoogleTest(&argc, argv);
+/**
+ * Generic type for a POJO used to carry the known data content of a smart card.
+ *
+ * @since 2.0.0
+ */
+class KeypleSmartCard {
+public:
+    /**
+     * Virtual destructor.
+     */
+    virtual ~KeypleSmartCard() = default;
+};
 
-    /* Run */
-    return RUN_ALL_TESTS();
+}
+}
 }

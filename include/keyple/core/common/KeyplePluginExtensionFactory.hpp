@@ -7,15 +7,27 @@
  * SPDX-License-Identifier: MIT                                                                   *
  **************************************************************************************************/
 
-#include "gtest/gtest.h"
+#pragma once
 
-using namespace testing;
+namespace keyple {
+namespace core {
+namespace common {
 
-int main(int argc, char **argv)
-{
-    /* Initialize GTest */
-    ::testing::InitGoogleTest(&argc, argv);
+/**
+ * Generic type for a factory of Keyple plugin extension.
+ *
+ * <p>Any Keyple plugin must provide a factory that implements this interface.
+ *
+ * @since 2.0.0
+ */
+class KeyplePluginExtensionFactory {
+public:
+    /**
+     * Virtual destructor.
+     */
+    virtual ~KeyplePluginExtensionFactory() = default;
+};
 
-    /* Run */
-    return RUN_ALL_TESTS();
+}
+}
 }

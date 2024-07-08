@@ -7,15 +7,27 @@
  * SPDX-License-Identifier: MIT                                                                   *
  **************************************************************************************************/
 
-#include "gtest/gtest.h"
+#pragma once
 
-using namespace testing;
+namespace keyple {
+namespace core {
+namespace common {
 
-int main(int argc, char **argv)
-{
-    /* Initialize GTest */
-    ::testing::InitGoogleTest(&argc, argv);
+/**
+ * Generic type for a Keyple distributed local service extension.
+ *
+ * <p>Any Keyple distributed local extension must provide a factory that implements this interface.
+ *
+ * @since 2.0.0
+ */
+class KeypleDistributedLocalServiceExtension {
+public:
+    /**
+     * Virtual destructor.
+     */
+    virtual ~KeypleDistributedLocalServiceExtension() = default;
+};
 
-    /* Run */
-    return RUN_ALL_TESTS();
+}
+}
 }

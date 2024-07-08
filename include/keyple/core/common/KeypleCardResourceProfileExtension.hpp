@@ -7,15 +7,28 @@
  * SPDX-License-Identifier: MIT                                                                   *
  **************************************************************************************************/
 
-#include "gtest/gtest.h"
+#pragma once
 
-using namespace testing;
+namespace keyple {
+namespace core {
+namespace common {
 
-int main(int argc, char **argv)
-{
-    /* Initialize GTest */
-    ::testing::InitGoogleTest(&argc, argv);
+/**
+ * Generic type for a card resource profile extension.
+ *
+ * <p>A Keyple card resource extension is used by the allocation process of the card resource
+ * service to identify and prepare a card resource.
+ *
+ * @since 2.0.0
+ */
+class KeypleCardResourceProfileExtension {
+public:
+    /**
+     * Virtual destructor.
+     */
+    virtual ~KeypleCardResourceProfileExtension() = default;
+};
 
-    /* Run */
-    return RUN_ALL_TESTS();
+}
+}
 }

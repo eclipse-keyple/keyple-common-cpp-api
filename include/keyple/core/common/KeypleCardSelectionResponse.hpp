@@ -7,15 +7,28 @@
  * SPDX-License-Identifier: MIT                                                                   *
  **************************************************************************************************/
 
-#include "gtest/gtest.h"
+#pragma once
 
-using namespace testing;
+namespace keyple {
+namespace core {
+namespace common {
 
-int main(int argc, char **argv)
-{
-    /* Initialize GTest */
-    ::testing::InitGoogleTest(&argc, argv);
+/**
+ * Generic type for a POJO used to carry the response of a card selection request.
+ *
+ * <p>A card selection response is the result of presenting a card to an observable reader in a
+ * selection scenario.
+ *
+ * @since 2.0.0
+ */
+class KeypleCardSelectionResponse {
+public:
+    /**
+     * Virtual destructor.
+     */
+    virtual ~KeypleCardSelectionResponse() = default;
+};
 
-    /* Run */
-    return RUN_ALL_TESTS();
+}
+}
 }

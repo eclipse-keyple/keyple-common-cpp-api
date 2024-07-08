@@ -7,15 +7,27 @@
  * SPDX-License-Identifier: MIT                                                                   *
  **************************************************************************************************/
 
-#include "gtest/gtest.h"
+#pragma once
 
-using namespace testing;
+namespace keyple {
+namespace core {
+namespace common {
 
-int main(int argc, char **argv)
-{
-    /* Initialize GTest */
-    ::testing::InitGoogleTest(&argc, argv);
+/**
+ * Generic type for a POJO carrying card selection settings.
+ *
+ * <p>A Keyple card selector defines the settings of a card selection case.
+ *
+ * @since 2.0.0
+ */
+class KeypleCardSelector {
+public:
+    /**
+     * Virtual destructor.
+     */
+    virtual ~KeypleCardSelector() = default;
+};
 
-    /* Run */
-    return RUN_ALL_TESTS();
+}
+}
 }
