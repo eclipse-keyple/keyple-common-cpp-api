@@ -29,6 +29,6 @@ public:
     virtual ~KeypleCardResourceProfileExtension() = default;
 };
 
-}
-}
-}
+} /* namespace common */
+} /* namespace core */
+} /* namespace keyple */

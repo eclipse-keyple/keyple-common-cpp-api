@@ -9,10 +9,8 @@
 
 #include "gtest/gtest.h"
 
-using namespace testing;
-
-int main(int argc, char **argv)
-{
+int
+main(int argc, char** argv) {
     /* Initialize GTest */
     ::testing::InitGoogleTest(&argc, argv);
 

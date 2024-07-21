@@ -28,6 +28,6 @@ public:
     virtual ~KeypleCardSelector() = default;
 };
 
-}
-}
-}
+} /* namespace common */
+} /* namespace core */
+} /* namespace keyple */

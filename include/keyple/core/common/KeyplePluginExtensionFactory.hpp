@@ -28,6 +28,6 @@ public:
     virtual ~KeyplePluginExtensionFactory() = default;
 };
 
-}
-}
-}
+} /* namespace common */
+} /* namespace core */
+} /* namespace keyple */

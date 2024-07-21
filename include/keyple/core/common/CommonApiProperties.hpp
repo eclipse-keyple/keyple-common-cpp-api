@@ -37,8 +37,8 @@ namespace common {
 // };
 
 // const std::string CommonApiProperties::VERSION = "2.0";
-static const std::string CommonApiProperties_VERSION = "2.0";
+static const char* CommonApiProperties_VERSION = "2.0";
 
-}
-}
-}
+} /* namespace common */
+} /* namespace core */
+} /* namespace keyple */

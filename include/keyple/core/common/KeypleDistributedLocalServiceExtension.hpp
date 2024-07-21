@@ -28,6 +28,6 @@ public:
     virtual ~KeypleDistributedLocalServiceExtension() = default;
 };
 
-}
-}
-}
+} /* namespace common */
+} /* namespace core */
+} /* namespace keyple */

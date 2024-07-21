@@ -14,12 +14,9 @@
 
 #include "keyple/core/common/CommonApiProperties.hpp"
 
-using namespace testing;
-
 using keyple::core::common::CommonApiProperties_VERSION;
 
-TEST(CommonApiPropertiesTest, versionIsCorrectlyWritten)
-{
+TEST(CommonApiPropertiesTest, versionIsCorrectlyWritten) {
     const std::string& apiVersion = CommonApiProperties_VERSION;
     const std::regex r("\\d+\\.\\d+");
 

@@ -29,6 +29,6 @@ public:
     virtual ~KeypleCardSelectionResponse() = default;
 };
 
-}
-}
-}
+} /* namespace common */
+} /* namespace core */
+} /* namespace keyple */

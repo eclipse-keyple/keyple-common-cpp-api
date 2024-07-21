@@ -30,6 +30,6 @@ public:
     virtual ~KeyplePluginExtension() = default;
 };
 
-}
-}
-}
+} /* namespace common */
+} /* namespace core */
+} /* namespace keyple */

@@ -45,8 +45,8 @@ public:
      * @since 2.0.0
      */
     virtual const std::string& getCommonApiVersion() const = 0;
- };
+};
 
-}
-}
-}
+} /* namespace common */
+} /* namespace core */
+} /* namespace keyple */

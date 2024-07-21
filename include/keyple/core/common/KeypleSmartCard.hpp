@@ -26,6 +26,6 @@ public:
     virtual ~KeypleSmartCard() = default;
 };
 
-}
-}
-}
+} /* namespace common */
+} /* namespace core */
+} /* namespace keyple */

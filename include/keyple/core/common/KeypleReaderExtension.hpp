@@ -30,6 +30,6 @@ public:
     virtual ~KeypleReaderExtension() = default;
 };
 
-}
-}
-}
+} /* namespace common */
+} /* namespace core */
+} /* namespace keyple */
