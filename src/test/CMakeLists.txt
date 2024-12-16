@@ -10,11 +10,13 @@
 SET(EXECTUABLE_NAME keyplecommoncppapi_ut)
 
 INCLUDE_DIRECTORIES(
+
     ${CMAKE_CURRENT_SOURCE_DIR}
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../include
+    ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 ADD_EXECUTABLE(
+
     ${EXECTUABLE_NAME}
 
     ${CMAKE_CURRENT_SOURCE_DIR}/MainTest.cpp
@@ -24,4 +26,13 @@ ADD_EXECUTABLE(
 # Add Google Test
 INCLUDE(CMakeLists.txt.googletest)
 
-TARGET_LINK_LIBRARIES(${EXECTUABLE_NAME} gtest gmock)
+TARGET_LINK_LIBRARIES(
+
+    ${EXECTUABLE_NAME}
+
+    PRIVATE
+
+    gtest
+    gmock
+    Keyple::Common
+)

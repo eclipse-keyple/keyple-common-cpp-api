@@ -7,18 +7,30 @@
 # SPDX-License-Identifier: MIT                                                                    *
 # *************************************************************************************************/
 
-SET(LIBRARY_NAME keyplecommoncppapilib)
+SET(LIBRARY_NAME keyplecommon)
 
 # Declare this library as header only.
 ADD_LIBRARY(
+
     ${LIBRARY_NAME}
+
     INTERFACE
 )
 
 TARGET_INCLUDE_DIRECTORIES(
+
     ${LIBRARY_NAME}
+
     INTERFACE
+
     ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-ADD_LIBRARY(Keyple::CommonApi ALIAS ${LIBRARY_NAME})
+ADD_LIBRARY(
+
+    Keyple::Common
+
+    ALIAS
+
+    ${LIBRARY_NAME}
+)
