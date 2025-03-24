@@ -10,7 +10,7 @@ The full documentation, including the **user guide**, **download information** a
 
 ## API documentation
 
-API documentation & class diagram is available online: [eclipse.github.io/keyple-common-cpp-api](https://eclipse.github.io/keyple-common-cpp-api)
+API documentation & class diagram is available online: [docs.keyple.org/keyple-common-cpp-api](https://docs.keyple.org/keyple-common-cpp-api)
 
 
 ## About the source code
