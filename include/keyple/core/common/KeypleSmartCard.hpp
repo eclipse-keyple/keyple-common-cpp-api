@@ -8,18 +8,25 @@
  * SPDX-License-Identifier: MIT                                               *
  ******************************************************************************/
 
-#include <regex>
+#pragma once
 
-#include "gmock/gmock.h"
-#include "gtest/gtest.h"
+namespace keyple {
+namespace core {
+namespace common {
 
-#include "keyple/core/common/CommonApiProperties.hpp"
+/**
+ * Generic type for a POJO used to carry the known data content of a smart card.
+ *
+ * @since 2.0.0
+ */
+class KeypleSmartCard {
+public:
+    /**
+     * Virtual destructor.
+     */
+    virtual ~KeypleSmartCard() = default;
+};
 
-using keyple::core::common::CommonApiProperties_VERSION;
-
-TEST(CommonApiPropertiesTest, versionIsCorrectlyWritten) {
-    const std::string& apiVersion = CommonApiProperties_VERSION;
-    const std::regex r("\\d+\\.\\d+");
-
-    ASSERT_TRUE(std::regex_match(apiVersion, r));
-}
+} /* namespace common */
+} /* namespace core */
+} /* namespace keyple */

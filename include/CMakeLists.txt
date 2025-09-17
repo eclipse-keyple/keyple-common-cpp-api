@@ -8,32 +8,30 @@
 # SPDX-License-Identifier: MIT                                                *
 # *****************************************************************************/
 
-SET(EXECTUABLE_NAME keyplecommoncppapi_ut)
+SET(LIBRARY_NAME keyplecommon)
 
-INCLUDE_DIRECTORIES(
+# Declare this library as header only.
+ADD_LIBRARY(
 
-    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${LIBRARY_NAME}
+
+    INTERFACE
+)
+
+TARGET_INCLUDE_DIRECTORIES(
+
+    ${LIBRARY_NAME}
+
+    INTERFACE
+
     ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-ADD_EXECUTABLE(
+ADD_LIBRARY(
 
-    ${EXECTUABLE_NAME}
-
-    ${CMAKE_CURRENT_SOURCE_DIR}/MainTest.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/CommonApiPropertiesTest.cpp
-)
-
-# Add Google Test
-INCLUDE(CMakeLists.txt.googletest)
-
-TARGET_LINK_LIBRARIES(
-
-    ${EXECTUABLE_NAME}
-
-    PRIVATE
-
-    gtest
-    gmock
     Keyple::Common
+
+    ALIAS
+
+    ${LIBRARY_NAME}
 )

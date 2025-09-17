@@ -8,18 +8,27 @@
  * SPDX-License-Identifier: MIT                                               *
  ******************************************************************************/
 
-#include <regex>
+#pragma once
 
-#include "gmock/gmock.h"
-#include "gtest/gtest.h"
+namespace keyple {
+namespace core {
+namespace common {
 
-#include "keyple/core/common/CommonApiProperties.hpp"
+/**
+ * Generic type for a POJO carrying card selection settings.
+ *
+ * <p>A Keyple card selector defines the settings of a card selection case.
+ *
+ * @since 2.0.0
+ */
+class KeypleCardSelector {
+public:
+    /**
+     * Virtual destructor.
+     */
+    virtual ~KeypleCardSelector() = default;
+};
 
-using keyple::core::common::CommonApiProperties_VERSION;
-
-TEST(CommonApiPropertiesTest, versionIsCorrectlyWritten) {
-    const std::string& apiVersion = CommonApiProperties_VERSION;
-    const std::regex r("\\d+\\.\\d+");
-
-    ASSERT_TRUE(std::regex_match(apiVersion, r));
-}
+} /* namespace common */
+} /* namespace core */
+} /* namespace keyple */
