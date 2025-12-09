@@ -11,15 +11,17 @@
 # *************************************************************************************************/
 
 PROJECT(KeypleCommonCppApi C CXX)
-CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
 
 SET(CMAKE_PROJECT_VERSION_MAJOR "2")
 SET(CMAKE_PROJECT_VERSION_MINOR "0")
 SET(CMAKE_PROJECT_VERSION_PATCH "0")
+SET(CMAKE_PROJECT_VERSION_TWEAK "1")
 
 SET(CMAKE_PROJECT_VERSION "${CMAKE_PROJECT_VERSION_MAJOR}.
                            ${CMAKE_PROJECT_VERSION_MINOR}.
-                           ${CMAKE_PROJECT_VERSION_PATCH}")
+                           ${CMAKE_PROJECT_VERSION_PATCH}.
+                           ${CMAKE_PROJECT_VERSION_TWEAK}")
 
 SET(PACKAGE_NAME "keyple-common-cpp-api")
 SET(PACKAGE_VERSION ${CMAKE_PROJECT_VERSION})
