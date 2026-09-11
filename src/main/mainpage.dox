@@ -1,0 +1,22 @@
+/**
+ * @mainpage Keyple Common C++ API
+ *
+ * @section overview Overview
+ *
+ * The **Keyple Common C++ API** contains the interfaces of the objects that
+ * are involved in the public interactions between different Keyple components,
+ * providing the foundation for component communication.
+ *
+ * @section key_features Key Features
+ *
+ * - Common interfaces for Keyple components
+ * - Plugin and reader extension points
+ * - Standard component interaction contracts
+ * - Base API for Keyple architecture
+ * - Cross-component communication interfaces
+ *
+ * @section resources Resources
+ *
+ * - **Documentation**: [keyple.org](https://keyple.org)
+ * - **API Documentation**: [docs.keyple.org/keyple-common-cpp-api](https://docs.keyple.org/keyple-common-cpp-api)
+ */
