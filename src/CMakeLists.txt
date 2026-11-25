@@ -8,5 +8,8 @@
 # SPDX-License-Identifier: MIT                                                *
 # *****************************************************************************/
 
-# Add projects
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/test/)
+OPTION(BUILD_TESTING "Build the unit tests" ON)
+
+IF(BUILD_TESTING)
+    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/test/)
+ENDIF()
